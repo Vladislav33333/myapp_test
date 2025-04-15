@@ -1,0 +1,72 @@
+
+.TestProps_container{
+  padding: 20px;
+  width: 500px;
+
+}
+
+.TestProps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(202, 202, 202);
+  background-color: #2e34281b;
+  box-sizing: border-box;
+  border: 1px solid rgb(145, 145, 145);
+  border-radius: 5px;
+  margin: 3.5vh;
+  padding: 10px;
+  
+}
+
+.enabled{
+  box-shadow: 4px 4px 8px 0px rgba(171, 171, 171, 0.191);
+}
+
+.TestProps_ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 30px;
+}
+
+.TestProps_ul li{
+  color: rgb(212, 212, 212);
+  font-size: 18px;
+}
+
+.TestProps_Btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  color: rgb(214, 214, 214);
+  margin: 0px  5px;
+  width: 45px;
+  height: 15px;
+  border: 1px solid rgb(185, 184, 184);
+  background-color: #282c34;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.TestProps_Btn:hover{
+  color: rgb(147, 210, 0);
+  border: 1px solid rgb(147, 210, 0);
+}
+
+.TestProps_Btn:disabled{
+  /* display: none; */
+  color: rgb(55, 55, 55);
+  background-color: rgba(91, 91, 91, 0.051);
+  border: 1px solid rgb(77, 77, 77);
+  
+}
+

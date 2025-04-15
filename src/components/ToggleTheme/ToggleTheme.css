@@ -1,0 +1,24 @@
+
+.dark{
+background-color: black;
+}
+
+.light{
+  background-color: rgb(214, 214, 214);
+  }
+
+  .green{
+    background-color: green;
+  }
+
+  .primary--btn{
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 100px;
+}
