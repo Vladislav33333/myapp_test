@@ -12,11 +12,10 @@
   color: rgb(202, 202, 202);
   background-color: #2e34281b;
   box-sizing: border-box;
-  border: 1px solid rgb(145, 145, 145);
+  border: 1px solid rgb(105, 105, 105);
   border-radius: 5px;
   margin: 3.5vh;
   padding: 10px;
-  
 }
 
 .enabled{
