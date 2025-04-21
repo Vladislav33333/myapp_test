@@ -1,5 +1,4 @@
 import "./App.css";
-import "./components/ToggleTheme/ToggleTheme.css";
 import ToolTemplate from "./components/ToolTemplate";
 import users from "./components/toolsData";
 import { useState } from "react";
@@ -17,8 +16,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Mill tools</h1>
-      <div className="TestProps_container">
+      <h1>Фрезы для 350i / X10RUS</h1>
+      <div className="ToolTemplate_container">
         <ToolTemplate
           id={users.tool1.id}
           name={users.tool1.name}
@@ -40,7 +39,7 @@ const App = () => {
           onClick={handleEditClick}
           type="button"
         >
-          Редактировать
+          Edit
         </button>
         <button
           className="app_btn"
@@ -48,7 +47,7 @@ const App = () => {
           onClick={handleOkClick}
           type="button"
         >
-          Подтвердить
+          Ok
         </button>
       </div>
     </div>

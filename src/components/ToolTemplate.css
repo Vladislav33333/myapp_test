@@ -1,11 +1,10 @@
-
-.TestProps_container{
+.ToolTemplate_container{
   padding: 20px;
   width: 500px;
 
 }
 
-.TestProps{
+.ToolTemplate{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,11 +17,7 @@
   padding: 10px;
 }
 
-.enabled{
-  box-shadow: 4px 4px 8px 0px rgba(171, 171, 171, 0.191);
-}
-
-.TestProps_ul{
+.ToolTemplate_ul{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -32,21 +27,19 @@
   margin: 0 30px;
 }
 
-.TestProps_ul li{
+.ToolTemplate_ul li{
   color: rgb(212, 212, 212);
   font-size: 18px;
 }
 
-.TestProps_Btn{
+.ToolTemplate_Btn{
   display: flex;
   align-items: center;
   justify-content: center;
-
-
   color: rgb(214, 214, 214);
   margin: 0px  5px;
   width: 45px;
-  height: 15px;
+  height: 18px;
   border: 1px solid rgb(185, 184, 184);
   background-color: #282c34;
   border-radius: 2px;
@@ -56,12 +49,12 @@
   -o-border-radius: 2px;
 }
 
-.TestProps_Btn:hover{
+.ToolTemplate_Btn:hover{
   color: rgb(147, 210, 0);
   border: 1px solid rgb(147, 210, 0);
 }
 
-.TestProps_Btn:disabled{
+.ToolTemplate_Btn:disabled{
   /* display: none; */
   color: rgb(55, 55, 55);
   background-color: rgba(91, 91, 91, 0.051);

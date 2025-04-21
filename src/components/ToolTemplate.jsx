@@ -1,20 +1,20 @@
 import React from "react";
 import useCounter from "../services/TestProps_counter";
-import "./TestProps.css";
+import "./ToolTemplate.css";
 import { borderLight } from "../services/borderLight";
 
 function Testprops(props) {
   const { count, plusCount, minusCount } = useCounter();
 
   return (
-    <div style={borderLight(props.isEditing)} className="TestProps">
+    <div style={borderLight(props.isEditing)} className="ToolTemplate">
       <h3>{props.name}</h3>
-      <ul className="TestProps_ul">
+      <ul className="ToolTemplate_ul">
         <li>Наличие: {count}</li>
         <li>Артикул: {props.id}</li>
       </ul>
       <button
-        className="TestProps_Btn"
+        className="ToolTemplate_Btn"
         onClick={plusCount}
         type="button"
         disabled={!props.isEditing}
@@ -22,7 +22,7 @@ function Testprops(props) {
         +
       </button>
       <button
-        className="TestProps_Btn"
+        className="ToolTemplate_Btn"
         onClick={minusCount}
         type="button"
         disabled={!props.isEditing}
