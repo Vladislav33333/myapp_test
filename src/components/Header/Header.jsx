@@ -1,18 +1,15 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
-export default function Header() {
-  const [counter, setCounter] = useState(0);
-
-  // Функции для изменения состояния
-  const inc = () => setCounter((prev) => prev + 1);
-  const dec = () => setCounter((prev) => Math.max(0, prev - 1));
-
+const Header = () => {
   return (
-    <div>
-      <h1>Counter: {counter}</h1>
-      <button onClick={inc}>+</button>
-      <button onClick={dec}>-</button>
-      <button onClick={() => setCounter(0)}>Reset</button>
-    </div>
+    <header>
+      <nav>
+        <Link to="/tools">Фрезы</Link>
+        <Link to="/about">Цирконий</Link>
+        <Link to="/contacts">PMMA</Link>
+      </nav>
+    </header>
   );
-}
+};
+export default Header;

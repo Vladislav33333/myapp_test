@@ -1,9 +1,9 @@
 import React from "react";
-import useCounter from "../services/TestProps_counter";
+import useCounter from "../../../services/Tool_counter";
 import "./ToolTemplate.css";
-import { borderLight } from "../services/borderLight";
+import { borderLight } from "../../../services/borderLight";
 
-function Testprops(props) {
+function ToolTemplate(props) {
   const { count, plusCount, minusCount } = useCounter();
 
   return (
@@ -33,4 +33,4 @@ function Testprops(props) {
   );
 }
 
-export default Testprops;
+export default ToolTemplate;

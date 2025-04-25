@@ -1,56 +1,22 @@
 import "./App.css";
-import ToolTemplate from "./components/ToolTemplate";
-import users from "./components/toolsData";
-import { useState } from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Header from "./components/Header/Header.jsx";
+import { ToolPage } from "././components/pages/ToolPage/ToolPage.jsx";
 const App = () => {
-  const [editMode, setEditMode] = useState(false);
-
-  const handleEditClick = () => {
-    setEditMode(true);
-  };
-
-  const handleOkClick = () => {
-    setEditMode(false);
-  };
-
   return (
-    <div className="App">
-      <h1>Фрезы для 350i / X10RUS</h1>
-      <div className="ToolTemplate_container">
-        <ToolTemplate
-          id={users.tool1.id}
-          name={users.tool1.name}
-          isEditing={editMode}
-        />
-        <ToolTemplate
-          id={users.tool2.id}
-          name={users.tool2.name}
-          isEditing={editMode}
-        />
-        <ToolTemplate
-          id={users.tool3.id}
-          name={users.tool3.name}
-          isEditing={editMode}
-        />
-        <button
-          className="app_btn"
-          disabled={editMode}
-          onClick={handleEditClick}
-          type="button"
-        >
-          Edit
-        </button>
-        <button
-          className="app_btn"
-          disabled={!editMode}
-          onClick={handleOkClick}
-          type="button"
-        >
-          Ok
-        </button>
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to="/">Главная</Link>
+          <Link to="/mill-tools">Фрезы</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/mill-tools" element={<ToolPage />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 };
 export default App;
