@@ -1,6 +1,6 @@
-import ToolTemplate from "../ToolTemplate/ToolTemplate"; // Убрали .jsx
+import ToolTemplate from "../ToolTemplate/ToolTemplate";
 import toolsData from "../../../services/toolsData";
-import "./ToolPage.css"; // Правильный путь к CSS
+import "./ToolPage.css";
 import { useState } from "react";
 
 export const ToolPage = () => {
@@ -16,7 +16,7 @@ export const ToolPage = () => {
 
   return (
     <div className="ToolPage">
-      <h1>Фрезы для 350i / X10RUS</h1>
+      <h1>Фрезы для 350i / X10 RUS</h1>
       <div className="ToolTemplate_container">
         <ToolTemplate
           id={toolsData.tool1.id}
@@ -34,7 +34,7 @@ export const ToolPage = () => {
           isEditing={editMode}
         />
         <button
-          className="app_btn"
+          className="tool-page_btn"
           disabled={editMode}
           onClick={handleEditClick}
           type="button"
@@ -42,7 +42,7 @@ export const ToolPage = () => {
           Edit
         </button>
         <button
-          className="app_btn"
+          className="tool-page_btn"
           disabled={!editMode}
           onClick={handleOkClick}
           type="button"

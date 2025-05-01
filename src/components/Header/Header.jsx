@@ -3,11 +3,14 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <Link to="/tools">Фрезы</Link>
-        <Link to="/about">Цирконий</Link>
-        <Link to="/contacts">PMMA</Link>
+    <header className="header">
+      <nav className="nav">
+        <Link className="link" to="/mill-tools">
+          Фрезы
+        </Link>
+        <Link className="link" to="/zr-tools">
+          Блоки
+        </Link>
       </nav>
     </header>
   );

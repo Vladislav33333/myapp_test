@@ -1,15 +1,15 @@
-.ToolTemplate_container{
-  padding: 20px;
-  width: 500px;
+/* .ToolTemplate_container{ */
+  /* padding: 20px; */
+  /* width: 500px; */
 
-}
+/* } */
 
 .ToolTemplate{
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(202, 202, 202);
-  background-color: #2e34281b;
+  background-color: #2020202a;
   box-sizing: border-box;
   border: 1px solid rgb(105, 105, 105);
   border-radius: 5px;
@@ -23,13 +23,14 @@
   flex-wrap: wrap;
   flex-direction: column;
   list-style-type: none;
-  padding: 0;
+  /* padding: 0; */
   margin: 0 30px;
 }
 
 .ToolTemplate_ul li{
   color: rgb(212, 212, 212);
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .ToolTemplate_Btn{
