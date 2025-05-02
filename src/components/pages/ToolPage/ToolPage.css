@@ -44,6 +44,7 @@ h1 {
   height: 30px;
   list-style: none;
   text-decoration: none;
+  color: aliceblue;
   background-color: #282c34;
   -webkit-border-radius: 3px solid rgb(195, 29, 29);
   -moz-border-radius: 3px solid rgb(195, 29, 29);

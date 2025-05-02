@@ -18,7 +18,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Header />} />
             <Route path="/mill-tools" element={<ToolPage />} />
-            <Route path="/zr-tools" element={<ToolPage toolType="block" />} />
+            <Route
+              path="/zr-tools"
+              element={<ToolPage toolType="aiditeHT" />}
+            />
           </Routes>
           {/* <Footer /> */}
         </div>
