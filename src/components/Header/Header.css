@@ -35,7 +35,8 @@
 
 .link:active{
   color: rgb(232, 232, 232);
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.037);
+
 }
 
 .header .link:disabled{

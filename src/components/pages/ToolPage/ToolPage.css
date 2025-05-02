@@ -1,18 +1,17 @@
-h1{
+h1 {
   font-size: 20px;
   color: rgb(208, 208, 208);
   margin-top: 35px;
 }
 
-.tool-page_btn{
+.tool-page_btn {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(167, 167, 167);
-  margin: 0px  5px;
+  margin: 0px 5px;
   width: 145px;
   height: 35px;
   text-transform: uppercase;
   border: 1px solid rgb(185, 184, 184);
-  /* background-color: #d5d5d5; */
   background-color: #282c34;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -21,19 +20,57 @@ h1{
   -o-border-radius: 2px;
 }
 
-.tool-page_btn:active{
-  /* color: rgb(55, 55, 55); */
+.tool-page_btn:active {
   color: rgb(232, 232, 232);
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-/* .app_btn:hover{
-
-} */
-
-.tool-page_btn:disabled{
-  /* display: none; */
+.tool-page_btn:disabled {
   color: rgb(55, 55, 55);
   background-color: rgba(91, 91, 91, 0.051);
   border: 1px solid rgb(77, 77, 77);
 }
+.buttons-container {
+  height: 50px;
+  margin: 50px;
+}
+
+
+.search-container input{
+  outline: none;
+  border: 1px solid #97bd0028;
+  border-radius: 3px;
+  width: 200px;
+  height: 30px;
+  list-style: none;
+  text-decoration: none;
+  background-color: #282c34;
+  -webkit-border-radius: 3px solid rgb(195, 29, 29);
+  -moz-border-radius: 3px solid rgb(195, 29, 29);
+  -ms-border-radius: 3px solid rgb(195, 29, 29);
+  -o-border-radius: 3px solid rgb(195, 29, 29);
+}
+
+.list-container {
+  position: relative;
+  max-height: 600px;
+  margin: 10px 0;
+  /* border: 1px solid #404040; */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/* .list-container > div {
+  position: static !important;
+  height: auto !important;
+  overflow: visible !important;
+  will-change: unset !important;
+} */
+
+/* .list-container [style*="position: absolute"] {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  height: auto !important;
+} */
