@@ -1,8 +1,11 @@
-import { useState, useMemo } from "react";
-import { FixedSizeList as List } from "react-window";
-import ToolTemplate from "../ToolTemplate/ToolTemplate";
-import { categories } from "../../../services/toolsData";
+import { useState, useMemo, useCallback } from "react";
 import "./ToolPage.css";
+import { FixedSizeList as List } from "react-window";
+import { SearchBar } from "../../../services/SearchBar";
+import { emptyRow } from "../../../services/emptyRow";
+import { categories } from "../../../services/toolsData";
+import ToolTemplate from "../ToolTemplate/ToolTemplate";
+import ToolPageButtons from "../ToolPage/ToolPageButtons";
 
 export const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
@@ -23,19 +26,14 @@ export const ToolPage = ({ toolType = "mill" }) => {
     };
   }, [toolType, searchQuery]);
 
-  const handleEditClick = () => setEditMode(true);
-  const handleOkClick = () => setEditMode(false);
+  const handleEditClick = useCallback(() => setEditMode(true), []);
+  const handleOkClick = useCallback(() => setEditMode(false), []);
 
   const Row = ({ index, style }) => {
     const tool = filteredTools[index];
     return (
       <div style={style}>
-        <ToolTemplate
-          key={tool.id}
-          id={tool.id}
-          name={tool.name}
-          isEditing={editMode}
-        />
+        <ToolTemplate id={tool.id} name={tool.name} isEditing={editMode} />
       </div>
     );
   };
@@ -44,44 +42,19 @@ export const ToolPage = ({ toolType = "mill" }) => {
     <div className="ToolPage">
       <h1>{title}</h1>
 
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Поиск..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
+      <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
 
       <div className="list-container">
         <List
-          height={500} // Уменьшили высоту для места под кнопки
+          height={500}
           itemCount={filteredTools.length}
           itemSize={110}
           width="100%"
         >
-          {Row}
+          {filteredTools.length === 0 ? emptyRow : Row}
         </List>
       </div>
-
-      <div className="buttons-container">
-        <button
-          className="tool-page_btn"
-          disabled={editMode}
-          onClick={handleEditClick}
-          type="button"
-        >
-          Edit
-        </button>
-        <button
-          className="tool-page_btn"
-          disabled={!editMode}
-          onClick={handleOkClick}
-          type="button"
-        >
-          Ok
-        </button>
-      </div>
+      <ToolPageButtons {...{ editMode, handleEditClick, handleOkClick }} />
     </div>
   );
 };
