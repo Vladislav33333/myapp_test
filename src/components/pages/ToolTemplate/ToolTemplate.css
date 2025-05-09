@@ -30,6 +30,7 @@
 }
 
 .ToolTemplate_Btn{
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +45,11 @@
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+}
+
+.ToolTemplate_Btn:disabled{
+  cursor: help;
+  
 }
 
 .ToolTemplate_Btn:hover{

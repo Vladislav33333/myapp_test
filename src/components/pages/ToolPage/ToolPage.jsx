@@ -6,7 +6,8 @@ import { emptyRow } from "../../../services/emptyRow";
 import { categories } from "../../../services/toolsData";
 import ToolTemplate from "../ToolTemplate/ToolTemplate";
 import ToolPageButtons from "../ToolPage/ToolPageButtons";
-
+import { Link } from "react-router-dom";
+// import { ZrTools } from "../ZrTools/ZrTools";
 export const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,6 +17,7 @@ export const ToolPage = ({ toolType = "mill" }) => {
       title: "Категория не найдена",
       tools: {},
     };
+
     const toolsArray = Object.values(category.tools);
 
     return {
@@ -41,7 +43,17 @@ export const ToolPage = ({ toolType = "mill" }) => {
   return (
     <div className="ToolPage">
       <h1>{title}</h1>
-
+      <div className="nav">
+        <Link
+          className="link"
+          to={
+            toolType !== "mill" && toolType !== "aiditeHT" ? "/zr-tools" : "/"
+          }
+        >
+          {/* сделать адекватную логику кнопки назад*/}
+          Назад
+        </Link>
+      </div>
       <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
 
       <div className="list-container">

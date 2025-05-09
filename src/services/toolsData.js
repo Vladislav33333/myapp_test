@@ -33,4 +33,24 @@ export const categories = {
       item18: { id: 7827002, name: "D4 Aidite ML", count: 0 },
     },
   },
+  test: {
+    title: "test1",
+    tools: {
+      item1: { id: 22, name: "test1", count: 0 },
+      item2: { id: 323, name: "test2", count: 0 },
+      item3: { id: 232323, name: "test3", count: 0 },
+      item4: { id: 34, name: "test4", count: 0 },
+      item5: { id: 5454, name: "test5", count: 0 },
+    },
+  },
+  test2: {
+    title: "test2",
+    tools: {
+      item1: { id: 22, name: "test1", count: 0 },
+      item2: { id: 323, name: "test2", count: 0 },
+      item3: { id: 232323, name: "test3", count: 0 },
+      item4: { id: 34, name: "test4", count: 0 },
+      item5: { id: 5454, name: "test5", count: 0 },
+    },
+  },
 };

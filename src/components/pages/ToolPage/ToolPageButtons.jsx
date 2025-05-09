@@ -1,4 +1,5 @@
 import React from "react";
+import "./ToolPage.css";
 
 const ToolPageButtons = ({ editMode, handleEditClick, handleOkClick }) => {
   return (

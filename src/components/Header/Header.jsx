@@ -11,6 +11,9 @@ const Header = () => {
         <Link className="link" to="/zr-blocks">
           Цирконий
         </Link>
+        <Link className="link" to="/zr-tools">
+          Блоки
+        </Link>
       </nav>
     </header>
   );

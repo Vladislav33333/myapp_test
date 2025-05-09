@@ -18,6 +18,7 @@ h1 {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  cursor: pointer;
 }
 
 .tool-page_btn:active {
@@ -30,6 +31,7 @@ h1 {
   background-color: rgba(91, 91, 91, 0.051);
   border: 1px solid rgb(77, 77, 77);
 }
+
 .buttons-container {
   height: 50px;
   margin: 50px;
@@ -37,6 +39,7 @@ h1 {
 
 
 .search-container input{
+  margin-top: 15px;
   outline: none;
   border: 1px solid #97bd0028;
   border-radius: 3px;
