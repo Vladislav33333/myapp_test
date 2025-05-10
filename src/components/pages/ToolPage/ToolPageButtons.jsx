@@ -1,7 +1,7 @@
-import React from "react";
+import { memo } from "react";
 import "./ToolPage.css";
 
-const ToolPageButtons = ({ editMode, handleEditClick, handleOkClick }) => {
+const ToolPageButtons = memo(({ editMode, handleEditClick, handleOkClick }) => {
   return (
     <div className="buttons-container">
       <button
@@ -22,5 +22,5 @@ const ToolPageButtons = ({ editMode, handleEditClick, handleOkClick }) => {
       </button>
     </div>
   );
-};
+});
 export default ToolPageButtons;

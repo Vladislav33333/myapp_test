@@ -1,25 +1,24 @@
-
-.nav{
+.nav {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-:link{
+:link {
   padding: 10px;
   text-decoration: none;
 }
 
-.link{
-  margin:20px 0 0;
+.link {
+  margin: 10px 0 0;
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(167, 167, 167);
   width: 145px;
   height: 15px;
   text-transform: uppercase;
-  /* border: 1px solid rgb(185, 184, 184); */
+  border: 1px solid rgb(83, 83, 83);
   background-color: #282c34;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -28,15 +27,15 @@
   -o-border-radius: 2px;
 }
 
-.link:active{
+.link:active {
   color: rgb(232, 232, 232);
   background-color: rgba(0, 0, 0, 0.037);
 
 }
 
-.header .link:disabled{
+.header .link:disabled {
   color: rgb(55, 55, 55);
   background-color: rgba(91, 91, 91, 0.051);
   border: 1px solid rgb(77, 77, 77);
-  
+
 }

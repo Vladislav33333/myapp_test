@@ -1,7 +1,6 @@
-import React from "react";
-import useCounter from "../../../services/Tool_counter";
 import "./ToolTemplate.css";
-import { borderLight } from "../../../services/borderLight";
+import useCounter from "../../../services/toolCounter.js";
+import { borderLight } from "../../../services/borderLight.js";
 
 function ToolTemplate(props) {
   const { count, plusCount, minusCount } = useCounter();

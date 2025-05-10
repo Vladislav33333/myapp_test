@@ -1,12 +1,13 @@
 import { useState, useMemo, useCallback } from "react";
 import "./ToolPage.css";
 import { FixedSizeList as List } from "react-window";
-import { SearchBar } from "../../../services/SearchBar";
+import { SearchBar } from "../../../components/pages/ToolPage/ToolPageSearchBar";
+import { ToolPageBackBtn } from "../../pages/ToolPage/ToolPageBackBtn";
 import { emptyRow } from "../../../services/emptyRow";
 import { categories } from "../../../services/toolsData";
 import ToolTemplate from "../ToolTemplate/ToolTemplate";
 import ToolPageButtons from "../ToolPage/ToolPageButtons";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { ZrTools } from "../ZrTools/ZrTools";
 export const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
@@ -43,22 +44,16 @@ export const ToolPage = ({ toolType = "mill" }) => {
   return (
     <div className="ToolPage">
       <h1>{title}</h1>
+
       <div className="nav">
-        <Link
-          className="link"
-          to={
-            toolType !== "mill" && toolType !== "aiditeHT" ? "/zr-tools" : "/"
-          }
-        >
-          {/* сделать адекватную логику кнопки назад*/}
-          Назад
-        </Link>
+        <ToolPageBackBtn />
       </div>
+
       <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
 
       <div className="list-container">
         <List
-          height={500}
+          height={460}
           itemCount={filteredTools.length}
           itemSize={110}
           width="100%"
