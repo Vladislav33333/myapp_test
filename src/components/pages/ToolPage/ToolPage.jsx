@@ -1,55 +1,67 @@
-import ToolTemplate from "../ToolTemplate/ToolTemplate";
-import toolsData from "../../../services/toolsData";
+import { useState, useMemo, useCallback } from "react";
 import "./ToolPage.css";
-import { useState } from "react";
-
-export const ToolPage = () => {
+import { FixedSizeList as List } from "react-window";
+import { SearchBar } from "../../../components/pages/ToolPage/ToolPageSearchBar";
+import { ToolPageBackBtn } from "../../pages/ToolPage/ToolPageBackBtn";
+import { emptyRow } from "../../../services/emptyRow";
+import { categories } from "../../../services/toolsData";
+import ToolTemplate from "../ToolTemplate/ToolTemplate";
+import ToolPageButtons from "../ToolPage/ToolPageButtons";
+// import { Link } from "react-router-dom";
+// import { ZrTools } from "../ZrTools/ZrTools";
+export const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleEditClick = () => {
-    setEditMode(true);
-  };
+  const { title, filteredTools } = useMemo(() => {
+    const category = categories[toolType] || {
+      title: "Категория не найдена",
+      tools: {},
+    };
 
-  const handleOkClick = () => {
-    setEditMode(false);
+    const toolsArray = Object.values(category.tools);
+
+    return {
+      title: category.title,
+      filteredTools: toolsArray.filter((tool) =>
+        tool.name.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    };
+  }, [toolType, searchQuery]);
+
+  const handleEditClick = useCallback(() => setEditMode(true), []);
+  const handleOkClick = useCallback(() => setEditMode(false), []);
+
+  const Row = ({ index, style }) => {
+    const tool = filteredTools[index];
+    return (
+      <div style={style}>
+        <ToolTemplate id={tool.id} name={tool.name} isEditing={editMode} />
+      </div>
+    );
   };
 
   return (
     <div className="ToolPage">
-      <h1>Фрезы для 350i / X10 RUS</h1>
-      <div className="ToolTemplate_container">
-        <ToolTemplate
-          id={toolsData.tool1.id}
-          name={toolsData.tool1.name}
-          isEditing={editMode}
-        />
-        <ToolTemplate
-          id={toolsData.tool2.id}
-          name={toolsData.tool2.name}
-          isEditing={editMode}
-        />
-        <ToolTemplate
-          id={toolsData.tool3.id}
-          name={toolsData.tool3.name}
-          isEditing={editMode}
-        />
-        <button
-          className="tool-page_btn"
-          disabled={editMode}
-          onClick={handleEditClick}
-          type="button"
-        >
-          Edit
-        </button>
-        <button
-          className="tool-page_btn"
-          disabled={!editMode}
-          onClick={handleOkClick}
-          type="button"
-        >
-          Ok
-        </button>
+      <h1>{title}</h1>
+
+      <div className="nav">
+        <ToolPageBackBtn />
       </div>
+
+      <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
+
+      <div className="list-container">
+        <List
+          height={460}
+          itemCount={filteredTools.length}
+          itemSize={110}
+          width="100%"
+        >
+          {filteredTools.length === 0 ? emptyRow : Row}
+        </List>
+      </div>
+      <ToolPageButtons {...{ editMode, handleEditClick, handleOkClick }} />
     </div>
   );
 };

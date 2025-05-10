@@ -1,24 +1,56 @@
-const tools = {
-  tool1: {
-    id: 5634446,
-    name: "3 ball",
-    count: 0,
+export const categories = {
+  mill: {
+    title: "Фрезы для 350i / X10 RUS",
+    tools: {
+      item1: { id: 5634334, name: "3 ball", count: 0 },
+      item2: { id: 1431222, name: "2 ball", count: 0 },
+      item3: { id: 8476820, name: "2 tor", count: 0 },
+      item4: { id: 6568206, name: "2 tor (L)", count: 0 },
+      item5: { id: 2433437, name: "1.5 ball", count: 0 },
+      item6: { id: 7433428, name: "1 ball", count: 0 },
+    },
   },
-  tool2: {
-    id: 5433422,
-    name: "2 ball",
-    count: 0,
+  aiditeHT: {
+    title: "Aidite HT",
+    tools: {
+      item1: { id: 7854446, name: "A0 Aidite ML", count: 0 },
+      item2: { id: 7826578, name: "A1 Aidite ML", count: 0 },
+      item3: { id: 7822344, name: "A2 Aidite ML", count: 0 },
+      item4: { id: 7827698, name: "A3 Aidite ML", count: 0 },
+      item5: { id: 7820965, name: "A35 Aidite ML", count: 0 },
+      item6: { id: 7822096, name: "A4 Aidite ML", count: 0 },
+      item7: { id: 7823422, name: "B1 Aidite ML", count: 0 },
+      item8: { id: 7822342, name: "B2 Aidite ML", count: 0 },
+      item9: { id: 7828223, name: "B3 Aidite ML", count: 0 },
+      item10: { id: 7828276, name: "B4 Aidite ML", count: 0 },
+      item11: { id: 7822092, name: "C1 Aidite ML", count: 0 },
+      item12: { id: 7822209, name: "C2 Aidite ML", count: 0 },
+      item13: { id: 7821241, name: "C3 Aidite ML", count: 0 },
+      item14: { id: 7812412, name: "C4 Aidite ML", count: 0 },
+      item15: { id: 7828124, name: "D1 Aidite ML", count: 0 },
+      item16: { id: 7782220, name: "D2 Aidite ML", count: 0 },
+      item17: { id: 7827829, name: "D3 Aidite ML", count: 0 },
+      item18: { id: 7827002, name: "D4 Aidite ML", count: 0 },
+    },
   },
-  tool3: {
-    id: 5432447,
-    name: "1.5 ball",
-    count: 0,
+  test: {
+    title: "test1",
+    tools: {
+      item1: { id: 22, name: "test1", count: 0 },
+      item2: { id: 323, name: "test2", count: 0 },
+      item3: { id: 232323, name: "test3", count: 0 },
+      item4: { id: 34, name: "test4", count: 0 },
+      item5: { id: 5454, name: "test5", count: 0 },
+    },
   },
-  tool4: {
-    id: 5465327,
-    name: "1 ball",
-    count: 0,
+  test2: {
+    title: "test2",
+    tools: {
+      item1: { id: 22, name: "test1", count: 0 },
+      item2: { id: 323, name: "test2", count: 0 },
+      item3: { id: 232323, name: "test3", count: 0 },
+      item4: { id: 34, name: "test4", count: 0 },
+      item5: { id: 5454, name: "test5", count: 0 },
+    },
   },
 };
-
-export default tools;

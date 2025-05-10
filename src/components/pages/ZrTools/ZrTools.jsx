@@ -1,18 +1,14 @@
+import { Link } from "react-router-dom";
+
 export const ZrTools = () => {
   return (
-    <ul>
-      <li>
-        <p>Zr Tool...</p>
-      </li>
-      <li>
-        <p>Zr Tool...</p>
-      </li>
-      <li>
-        <p>Zr Tool...</p>
-      </li>
-      <li>
-        <p>Zr Tool...</p>
-      </li>
-    </ul>
+    <div className="nav">
+      <Link className="link" to="/test">
+        Aidite
+      </Link>
+      <Link className="link" to="/test2">
+        Upcera
+      </Link>
+    </div>
   );
 };
