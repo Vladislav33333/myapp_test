@@ -1,7 +1,7 @@
 h1 {
   font-size: 20px;
   color: rgb(208, 208, 208);
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .tool-page_btn {
@@ -34,7 +34,7 @@ h1 {
 
 .buttons-container {
   height: 30px;
-  margin: 40px;
+  margin:25px 0 10px;
 }
 
 
@@ -43,7 +43,7 @@ h1 {
   outline: none;
   border: 1px solid #97bd0028;
   border-radius: 3px;
-  width: 200px;
+  width: auto;
   height: 30px;
   list-style: none;
   text-decoration: none;

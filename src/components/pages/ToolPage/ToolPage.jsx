@@ -32,12 +32,13 @@ export const ToolPage = ({ toolType = "mill" }) => {
 
   return (
     <div className="ToolPage">
-      <h1>{title}</h1>
       <div className="nav">
         <ToolPageBackBtn />
+        <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
       </div>
-      <SearchBar onClick={searchQuery} onChange={setSearchQuery} />
-      <div className="list-container">
+      <h1>{title}</h1>
+      <div>
+        <ToolPageButtons {...{ editMode, handleEditClick, handleOkClick }} />
         {filteredTools.length === 0 ? (
           emptyRow
         ) : (
@@ -53,7 +54,6 @@ export const ToolPage = ({ toolType = "mill" }) => {
           </div>
         )}
       </div>
-      <ToolPageButtons {...{ editMode, handleEditClick, handleOkClick }} />
     </div>
   );
 };

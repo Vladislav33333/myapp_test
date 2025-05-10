@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
 // import toolsData from "../../../services/toolsData"
+import { Link, useNavigate } from "react-router-dom";
 
-export const ToolPageBackBtn = (props) => {
+export const ToolPageBackBtn = (e) => {
+  const navigate = useNavigate();
+
+  const handleGoBack = (e) => {
+    e.preventDefault();
+    navigate(-1);
+  };
   return (
-    <Link
-      className="link"
-      to={
-        props.toolType !== "mill" && props.toolType !== "aiditeHT"
-          ? "/zr-tools"
-          : "/"
-      }
-    >
-      {/* сделать адекватную логику кнопки назад*/}
-      Назад
-    </Link>
+    <div>
+      <Link className="link" onClick={handleGoBack}>
+        Назад
+      </Link>
+    </div>
   );
 };

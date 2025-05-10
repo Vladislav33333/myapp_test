@@ -1,7 +1,9 @@
 .nav {
   display: flex;
-  align-items: center;
+
   justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -11,7 +13,7 @@
 }
 
 .link {
-  margin: 10px 0 0;
+  margin: 10px 0px 0;
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(167, 167, 167);
