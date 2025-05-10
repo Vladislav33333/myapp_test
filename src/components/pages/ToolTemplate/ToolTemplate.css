@@ -7,10 +7,9 @@
   box-sizing: border-box;
   border: 1px solid rgb(105, 105, 105);
   border-radius: 5px;
-  margin: 0.5vh 0.5vw;
+  margin: 4vh 3vw;
   /* padding: 10px; */
 }
-
 
 .ToolTemplate_ul {
   display: flex;
