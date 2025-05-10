@@ -55,9 +55,22 @@ h1 {
   -o-border-radius: 3px solid rgb(195, 29, 29);
 }
 
-.list-container {
-  position: relative;
+.tools-list {
   max-height: 600px;
   margin: 18px 0;
-  overflow: hidden;
+  overflow-y: auto;  /* Включаем вертикальную прокрутку */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(125, 214, 0, 0.465)  #282c34;
+  
+  /* Стили для WebKit браузеров (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(58, 79, 0);
+    border-radius: 4px;
+  }
 }
