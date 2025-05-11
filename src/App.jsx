@@ -1,9 +1,9 @@
-import "./App.css";
+import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Header from "./components/Header/Header.jsx";
-import { ToolPage } from "././components/pages/ToolPage/ToolPage.jsx";
-import { ZrTools } from "./components/pages/ZrTools/ZrTools.jsx";
+import Header from "./components/Header/Header";
+import { ToolPage } from "./features/tools/components/toolPage/ToolPage";
+import ZrTools from "./pages/ZrTools/ZrTools";
 
 // import Footer from "./components/Footer/Footer.jsx";
 const App = () => {

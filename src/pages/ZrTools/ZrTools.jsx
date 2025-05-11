@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-export const ZrTools = () => {
+const ZrTools = () => {
   return (
     <div className="nav">
-      <Link className="link" to="/test">
+      <Link className="link" to="/AiditeHT">
         Aidite
       </Link>
       <Link className="link" to="/test2">
@@ -12,3 +12,4 @@ export const ZrTools = () => {
     </div>
   );
 };
+export default ZrTools;

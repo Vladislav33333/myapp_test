@@ -8,9 +8,9 @@ const Header = () => {
         <Link className="link" to="/mill-tools">
           Фрезы
         </Link>
-        <Link className="link" to="/zr-blocks">
+        {/* <Link className="link" to="/zr-blocks">
           Цирконий
-        </Link>
+        </Link> */}
         <Link className="link" to="/zr-tools">
           Блоки
         </Link>

@@ -1,4 +1,4 @@
-.ToolTemplate {
+.toolTemplate {
   display: flex;
   justify-content:center;
   align-items: center;
@@ -11,7 +11,7 @@
   /* padding: 10px; */
 }
 
-.ToolTemplate_ul {
+.toolTemplate_ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -20,13 +20,13 @@
   margin: 0 30px;
 }
 
-.ToolTemplate_ul li {
+.toolTemplate_ul li {
   color: rgb(212, 212, 212);
   font-size: 16px;
   font-weight: 100;
 }
 
-.ToolTemplate_Btn {
+.toolTemplate_Btn {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -44,17 +44,17 @@
   -o-border-radius: 2px;
 }
 
-.ToolTemplate_Btn:disabled {
+.toolTemplate_Btn:disabled {
   cursor: help;
 
 }
 
-.ToolTemplate_Btn:hover {
+.toolTemplate_Btn:hover {
   color: rgb(147, 210, 0);
   border: 1px solid rgb(147, 210, 0);
 }
 
-.ToolTemplate_Btn:disabled {
+.toolTemplate_Btn:disabled {
   color: rgb(55, 55, 55);
   background-color: rgba(91, 91, 91, 0.051);
   border: 1px solid rgb(77, 77, 77);
