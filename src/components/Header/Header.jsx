@@ -12,7 +12,7 @@ const Header = () => {
           Цирконий
         </Link> */}
         <Link className="link" to="/zr-tools">
-          Блоки
+          Цирконий
         </Link>
       </nav>
     </header>

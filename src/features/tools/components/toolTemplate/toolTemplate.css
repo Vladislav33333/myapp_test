@@ -28,9 +28,9 @@
 
 .toolTemplate_Btn {
   cursor: pointer;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   color: rgb(214, 214, 214);
   margin: 0px 5px;
   width: 45px;

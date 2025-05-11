@@ -4,7 +4,7 @@ import { ToolButtons } from "../../buttons/ToolButtons.jsx";
 import { toolBorderActive } from "../../helpers/toolBorderActive.js";
 
 function ToolTemplate(props) {
-  // Состояние счетчика теперь здесь!
+  // Состояние счетчика теперь здесь
   const [count, setCount] = useState(0);
 
   const plusCount = () => setCount((prev) => prev + 1);
@@ -13,11 +13,10 @@ function ToolTemplate(props) {
   return (
     <div style={toolBorderActive(props.isEditing)} className="toolTemplate">
       <h3>{props.name}</h3>
-      <ul className="ToolTemplate_ul">
-        <li>Наличие: {count}</li> {/* Отображаем count */}
+      <ul className="toolTemplate_ul">
+        <li>Наличие: {count}</li>
         <li>Артикул: {props.id}</li>
       </ul>
-      {/* Передаем функции в ToolButtons */}
       <ToolButtons
         isEditing={props.isEditing}
         onPlus={plusCount}
