@@ -1,34 +1,61 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-import Header from "./components/Header/Header";
-import { ToolPage } from "./features/tools/components/toolPage/ToolPage";
+import { Layout } from "./components/Header/Layout";
+import ToolPage from "./features/tools/components/toolPage/ToolPage";
+import { HomePage } from "./pages/HomePage/HomePage";
 import ZrTools from "./pages/ZrTools/ZrTools";
 
-// import Footer from "./components/Footer/Footer.jsx";
+// Добавьте этот компонент
+
 const App = () => {
   return (
     <Router>
       <div className="App">
         <div className="App-container">
-          <nav className="nav">
-            <Link className="link" to="/">
-              Главная
-            </Link>
-          </nav>
           <Routes>
-            <Route path="/" element={<Header />} />
-            <Route path="/mill-tools" element={<ToolPage toolType="mill" />} />
             <Route
-              path="/aiditeHT"
-              element={<ToolPage toolType="aiditeHT" />}
+              path="/"
+              element={
+                <Layout>
+                  <HomePage />
+                </Layout>
+              }
+            />
+            <Route
+              path="/mill-tools"
+              element={
+                <Layout>
+                  <ToolPage toolType="mill" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools"
+              element={
+                <Layout>
+                  <ZrTools />
+                </Layout>
+              }
             />
 
-            <Route path="/zr-tools" element={<ZrTools />} />
-            <Route path="/test" element={<ToolPage toolType="test" />} />
-            <Route path="/test2" element={<ToolPage toolType="test2" />} />
+            <Route
+              path="/zr-tools/aiditeHT"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/upceraFunc"
+              element={
+                <Layout>
+                  <ToolPage toolType="upceraFunc" />
+                </Layout>
+              }
+              upceraFunc
+            />
           </Routes>
-          {/* <Footer /> */}
         </div>
       </div>
     </Router>

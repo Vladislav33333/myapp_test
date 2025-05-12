@@ -7,7 +7,7 @@ import { categories } from "../../helpers/toolsData";
 import ToolTemplate from "../toolTemplate/ToolTemplate";
 import ToolPageButtons from "../../buttons/ToolPageButtons";
 
-export const ToolPage = ({ toolType = "mill" }) => {
+const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -58,3 +58,4 @@ export const ToolPage = ({ toolType = "mill" }) => {
     </div>
   );
 };
+export default ToolPage;
