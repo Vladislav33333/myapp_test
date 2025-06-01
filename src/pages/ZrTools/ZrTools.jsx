@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const ZrTools = () => {
   return (
-    <div className="nav">
-      <Link className="link" to="/aiditeHT">
+    <div>
+      <Link className="link" to="aiditeHT">
         Aidite
-      </Link>
-      <Link className="link" to="/upceraFunc">
+      </Link>{" "}
+      <Link className="link" to="upceraFunc">
         Upcera
       </Link>
+      <Outlet />
     </div>
   );
 };

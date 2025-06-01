@@ -1,4 +1,3 @@
-// import toolsData from "../../../services/toolsData"
 import { Link, useNavigate } from "react-router-dom";
 
 export const ToolPageBackBtn = (e) => {
