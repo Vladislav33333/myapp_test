@@ -1,5 +1,5 @@
 import { memo } from "react";
-import "./ToolPage.css";
+import "../components/toolPage/toolPage.css";
 
 const ToolPageButtons = memo(({ editMode, handleEditClick, handleOkClick }) => {
   return (

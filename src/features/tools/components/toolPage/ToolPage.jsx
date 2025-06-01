@@ -1,13 +1,13 @@
 import { useState, useMemo, useCallback } from "react";
-import "./ToolPage.css";
-import { SearchBar } from "../../../components/pages/ToolPage/ToolPageSearchBar";
-import { ToolPageBackBtn } from "../../pages/ToolPage/ToolPageBackBtn";
-import { emptyRow } from "../../../services/emptyRow";
-import { categories } from "../../../services/toolsData";
-import ToolTemplate from "../ToolTemplate/ToolTemplate";
-import ToolPageButtons from "../ToolPage/ToolPageButtons";
+import "./toolPage.css";
+import { SearchBar } from "../../helpers/ToolSearch";
+import { ToolPageBackBtn } from "../../buttons/ToolPageBackBtn";
+import { emptyRow } from "../../helpers/emptyRow";
+import { categories } from "../../helpers/toolsData";
+import ToolTemplate from "../toolTemplate/ToolTemplate";
+import ToolPageButtons from "../../buttons/ToolPageButtons";
 
-export const ToolPage = ({ toolType = "mill" }) => {
+const ToolPage = ({ toolType = "mill" }) => {
   const [editMode, setEditMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -48,6 +48,7 @@ export const ToolPage = ({ toolType = "mill" }) => {
                 key={tool.id}
                 id={tool.id}
                 name={tool.name}
+                count={tool.count}
                 isEditing={editMode}
               />
             ))}
@@ -57,3 +58,4 @@ export const ToolPage = ({ toolType = "mill" }) => {
     </div>
   );
 };
+export default ToolPage;

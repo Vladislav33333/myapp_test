@@ -58,11 +58,10 @@ h1 {
 .tools-list {
   max-height: 600px;
   margin: 18px 0;
-  overflow-y: auto;  /* Включаем вертикальную прокрутку */
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(125, 214, 0, 0.465)  #282c34;
   
-  /* Стили для WebKit браузеров (Chrome, Safari) */
   &::-webkit-scrollbar {
     width: 8px;
   }
