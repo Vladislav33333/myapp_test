@@ -5,8 +5,6 @@ import ToolPage from "./features/tools/components/toolPage/ToolPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 import ZrTools from "./pages/ZrTools/ZrTools";
 
-// Добавьте этот компонент
-
 const App = () => {
   return (
     <Router>
