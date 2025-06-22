@@ -1,0 +1,76 @@
+.login_title {
+  text-transform: uppercase;
+  text-align: center;
+  /*Базовыйградиент*/
+  background: linear-gradient(45deg, #76dd00 0%, #c2f200 15%, #c5ec00 35%, #82c800 50%, #50ab00 65%, #669500 85%, #2caf00 100%);
+  /*Обрезаемфонпотексту*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /*Анимация*/
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+  /*Эффектытекста*/
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+  -webkit-animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login_form{
+  display: flex;
+  justify-content: center;
+}
+.login_form_input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 164px;
+}
+
+.login_form_input_item {
+  border: 1px solid rgb(83, 83, 83);
+  border-radius: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 20px;
+  padding: 8px;
+  background-color: #282c34;
+  color: aliceblue;
+}
+
+.login_form_input_item:focus {
+  outline: none;
+}
+
+
+.loginBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(167, 167, 167);
+  width: 180px;
+  height: 35px;
+  margin: 10px 0px 0;
+  border: 1px solid rgb(83, 83, 83);
+  background-color: #282c34;
+  border-radius: 2px;
+  transition: 0.15s ease-in;
+  text-transform: uppercase;
+}
+
+.loginBtn:hover{
+  color: white;
+}

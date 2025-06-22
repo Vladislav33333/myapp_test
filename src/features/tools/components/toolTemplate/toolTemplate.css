@@ -1,15 +1,23 @@
 .toolTemplate {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
+  width: 480px;
+  height: 90px;
   color: rgb(202, 202, 202);
   background-color: #2020202a;
   box-sizing: border-box;
   border: 1px solid rgb(105, 105, 105);
   border-radius: 5px;
-  margin: 2dvh 1dvw;
-  /* padding: 10px; */
+  margin: 2dvh 0.5dvw;
+  padding: 0.3dvw;
 }
+
+.toolTemplate h3{
+  font-size: 25px;
+  font-weight: 200;
+}
+
 
 .toolTemplate_ul {
   display: flex;
@@ -22,15 +30,14 @@
 
 .toolTemplate_ul li {
   color: rgb(212, 212, 212);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 100;
 }
 
 .toolTemplate_Btn {
+
   cursor: pointer;
-  /* display: flex; */
   align-items: center;
-  /* justify-content: center; */
   color: rgb(214, 214, 214);
   margin: 0px 5px;
   width: 45px;
@@ -42,6 +49,11 @@
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
 }
 
 .toolTemplate_Btn:disabled {

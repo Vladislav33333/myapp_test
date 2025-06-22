@@ -1,5 +1,8 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./components/Auth_test/AuthContext";
+import LoginForm from "./components/Auth_test/LoginForm";
+import { AuthContext } from "./components/Auth_test/AuthContext";
 import { Layout } from "./components/Header/Layout";
 import ToolPage from "./features/tools/components/toolPage/ToolPage";
 import { HomePage } from "./pages/HomePage/HomePage";
@@ -14,9 +17,19 @@ const App = () => {
             <Route
               path="/"
               element={
-                <Layout>
-                  <HomePage />
-                </Layout>
+                <AuthProvider>
+                  <AuthContext.Consumer>
+                    {({ isAuthenticated }) =>
+                      isAuthenticated ? (
+                        <Layout>
+                          <HomePage />
+                        </Layout>
+                      ) : (
+                        <LoginForm />
+                      )
+                    }
+                  </AuthContext.Consumer>
+                </AuthProvider>
               }
             />
             <Route
