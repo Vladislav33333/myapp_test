@@ -7,6 +7,8 @@ import { Layout } from "./components/Header/Layout";
 import ToolPage from "./features/tools/components/toolPage/ToolPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 import ZrTools from "./pages/ZrTools/ZrTools";
+import AiditeMenu from "./components/AllTools/Zircon/AiditeMenu/AiditeMenu";
+import AiditeSizeMenu from "./components/AllTools/Zircon/AiditeMenu/AiditeSizeMenu";
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
       <div className="App">
         <div className="App-container">
           <Routes>
+            {/* Главная страница */}
             <Route
               path="/"
               element={
@@ -32,6 +35,8 @@ const App = () => {
                 </AuthProvider>
               }
             />
+
+            {/* Страница фрез */}
             <Route
               path="/mill-tools"
               element={
@@ -40,6 +45,8 @@ const App = () => {
                 </Layout>
               }
             />
+
+            {/* Страница циркониевых инструментов - меню выбора */}
             <Route
               path="/zr-tools"
               element={
@@ -49,14 +56,118 @@ const App = () => {
               }
             />
 
+            {/* Меню выбора типа Aidite */}
             <Route
-              path="/zr-tools/aiditeHT"
+              path="/zr-tools/aidite"
               element={
                 <Layout>
-                  <ToolPage toolType="aiditeHT" />
+                  <AiditeMenu />
                 </Layout>
               }
             />
+
+            {/* Меню выбора размера для Aidite HT */}
+            <Route
+              path="/zr-tools/aidite/ht"
+              element={
+                <Layout>
+                  <AiditeSizeMenu type="ht" />
+                </Layout>
+              }
+            />
+
+            {/* Меню выбора размера для Aidite ST */}
+            <Route
+              path="/zr-tools/aidite/st"
+              element={
+                <Layout>
+                  <AiditeSizeMenu type="st" />
+                </Layout>
+              }
+            />
+
+            {/* Страницы с цветами и количеством */}
+            <Route
+              path="/zr-tools/aidite/ht/14"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT_14" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/ht/16"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT_16" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/ht/18"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT_18" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/ht/20"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT_20" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/ht/22"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeHT_22" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/st/14"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeST_14" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/st/16"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeST_16" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/st/18"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeST_18" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/st/20"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeST_20" />
+                </Layout>
+              }
+            />
+            <Route
+              path="/zr-tools/aidite/st/22"
+              element={
+                <Layout>
+                  <ToolPage toolType="aiditeST_22" />
+                </Layout>
+              }
+            />
+
             <Route
               path="/zr-tools/upceraFunc"
               element={
@@ -64,7 +175,6 @@ const App = () => {
                   <ToolPage toolType="upceraFunc" />
                 </Layout>
               }
-              upceraFunc
             />
           </Routes>
         </div>
@@ -72,4 +182,5 @@ const App = () => {
     </Router>
   );
 };
+
 export default App;
