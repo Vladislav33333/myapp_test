@@ -5,7 +5,7 @@ export const ToolButtons = ({ isEditing, onPlus, onMinus }) => {
     <div>
       <button
         type="button"
-        onClick={onPlus}
+        onClick={() => { console.log("plus"); onPlus(); }}
         disabled={!isEditing}
         className="toolTemplate_Btn"
       >
@@ -13,12 +13,14 @@ export const ToolButtons = ({ isEditing, onPlus, onMinus }) => {
       </button>
       <button
         type="button"
-        onClick={onMinus}
+        onClick={() => { console.log("MINUS"); onMinus(); }}
         disabled={!isEditing}
         className="toolTemplate_Btn"
+
       >
         -
       </button>
+
     </div>
   );
 };

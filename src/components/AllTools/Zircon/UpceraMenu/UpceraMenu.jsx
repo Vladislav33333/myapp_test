@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import { ToolPageBackBtn } from "../../../../features/tools/buttons/ToolPageBackBtn";
 
-const AiditeMenu = () => {
+const UpceraMenu = () => {
   return (
     <div>
       <ToolPageBackBtn />
-      <Link className="link" to="/zr-tools/aidite/ht">
-        Aidite HT
+      <Link className="link" to="/zr-tools/upcera/func">
+        Upcera Func
       </Link>
-      <Link className="link" to="/zr-tools/aidite/st">
-        Aidite ST
+      <Link className="link" to="/zr-tools/upcera/test">
+        Upcera test
       </Link>
     </div>
   );
 };
 
-export default AiditeMenu;
+export default UpceraMenu;

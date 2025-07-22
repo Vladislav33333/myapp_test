@@ -12,6 +12,15 @@ export const HomePage = () => {
         <Link className="link" to="/zr-tools">
           Цирконий
         </Link>
+        {/* <Link className="link" to="/premill-tools">
+          Премиллы
+        </Link>
+        <Link className="link" to="/ti-tools">
+          Платформы
+        </Link>
+        <Link className="link" to="/analog-tools">
+          Аналоги
+        </Link> */}
         <Link className="link logoutBtn" onClick={logout} type="button">
           Выйти
         </Link>
