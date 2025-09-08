@@ -60,14 +60,20 @@ const ToolPage = ({ toolType = "mill" }) => {
       tools: {}
     };
 
-    // Используем данные из Firebase, если они есть
     const toolsToUse = Object.keys(toolsData).length > 0 ? toolsData : category.tools;
 
-    // КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Преобразуем объект инструментов в массив с сохранением ключей
-    const toolsArray = Object.keys(toolsToUse).map(key => ({
-      key, // Сохраняем ключ объекта (item1, item2, ...)
-      ...toolsToUse[key] // Распаковываем данные инструмента
-    }));
+    // СОХРАНЯЕМ ИСХОДНЫЙ ПОРЯДОК
+    const originalOrder = Object.keys(category.tools);
+
+    // СОЗДАЕМ МАССИВ В НУЖНОМ ПОРЯДКЕ
+    const toolsArray = originalOrder.map(key => {
+      // Используем данные из Firebase, если они есть, иначе из исходных данных
+      const tool = toolsToUse[key] || category.tools[key];
+      return {
+        key,
+        ...tool
+      };
+    });
 
     return {
       title: category.title,
@@ -112,5 +118,4 @@ const ToolPage = ({ toolType = "mill" }) => {
     </div>
   );
 };
-
 export default ToolPage;

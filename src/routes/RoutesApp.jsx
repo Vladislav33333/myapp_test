@@ -10,6 +10,7 @@ import AiditeMenu from "../components/AllTools/Zircon/AiditeMenu/AiditeMenu";
 import AiditeSizeMenu from "../components/AllTools/Zircon/AiditeMenu/AiditeSizeMenu";
 import UpceraMenu from "../components/AllTools/Zircon/UpceraMenu/UpceraMenu";
 import UpceraSizeMenu from "../components/AllTools/Zircon/UpceraMenu/UpceraSizeMenu";
+import Settings from "../pages/Settings/Settings";
 
 export const RoutesApp = () => {
   return (
@@ -51,6 +52,15 @@ export const RoutesApp = () => {
           element={
             <Layout>
               <ZrTools />
+            </Layout>
+          }
+        />
+        {/* Страница настроек приложения - меню выбора */}
+        <Route
+          path="/settings"
+          element={
+            <Layout>
+              <Settings />
             </Layout>
           }
         />
@@ -186,7 +196,46 @@ export const RoutesApp = () => {
             </Layout>
           }
         />
-
+        <Route
+          path="/zr-tools/upcera/func/14"
+          element={
+            <Layout>
+              <ToolPage toolType="upceraFunc_14" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/zr-tools/upcera/func/16"
+          element={
+            <Layout>
+              <ToolPage toolType="upceraFunc_16" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/zr-tools/upcera/func/18"
+          element={
+            <Layout>
+              <ToolPage toolType="upceraFunc_18" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/zr-tools/upcera/func/20"
+          element={
+            <Layout>
+              <ToolPage toolType="upceraFunc_20" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/zr-tools/upcera/func/22"
+          element={
+            <Layout>
+              <ToolPage toolType="upceraFunc_22" />
+            </Layout>
+          }
+        />
         {/* Меню выбора размера для Upcera TEST */}
         <Route
           path="/zr-tools/upcera/test"

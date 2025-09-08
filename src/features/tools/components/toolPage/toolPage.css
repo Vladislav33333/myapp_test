@@ -1,19 +1,18 @@
 h1 {
   text-transform: uppercase;
   font-size: 25px;
-  color: rgb(208, 208, 208);
   margin-top: 30px;
 }
 
 .tool-page_btn {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(167, 167, 167);
+  background-color: var(--button-color);
+  color: var(--text-disabled);
   margin: 0px 5px;
   width: 145px;
   height: 35px;
   text-transform: uppercase;
-  border: 1px solid rgb(185, 184, 184);
-  background-color: #282c34;
+  border: 1px solid rgb(213, 213, 213);
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -41,7 +40,7 @@ h1 {
 
 .tool-page_btn:disabled {
   color: rgb(55, 55, 55);
-  background-color: rgba(91, 91, 91, 0.051);
+  background-color: var(--button-color);
   border: 1px solid rgb(77, 77, 77);
 }
 
@@ -50,18 +49,17 @@ h1 {
   margin:25px 0 10px;
 }
 
-
 .search-container input {
   margin-top: 15px;
   outline: none;
-  border: 1px solid #97bd0028;
+  border: 1px solid var(--border-color);
   border-radius: 3px;
   width: auto;
   height: 30px;
   list-style: none;
   text-decoration: none;
   color: aliceblue;
-  background-color: #282c34;
+  background-color: var(--bg-primary);
   -webkit-border-radius: 3px solid rgb(195, 29, 29);
   -moz-border-radius: 3px solid rgb(195, 29, 29);
   -ms-border-radius: 3px solid rgb(195, 29, 29);
@@ -73,16 +71,16 @@ h1 {
   margin: 18px 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(125, 214, 0, 0.465)  #282c34;
+  scrollbar-color:var(--bg-scrollbar-track) var(--bg-scroll-secondary);
   
   &::-webkit-scrollbar {
     width: 8px;
   }
   &::-webkit-scrollbar-track {
-    background: black;
+    background: var(--bg-scrollbar);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: rgb(58, 79, 0);
+    background-color: var(--bg-scrollbar);
     border-radius: 4px;
   }
 }

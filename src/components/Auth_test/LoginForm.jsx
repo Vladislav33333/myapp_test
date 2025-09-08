@@ -12,7 +12,6 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Простейшая проверка (в реальном приложении нужна серверная проверка)
     if (username === "1" && password === "1") {
       login();
     } else {

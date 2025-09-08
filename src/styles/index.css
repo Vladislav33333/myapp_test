@@ -1,3 +1,11 @@
+* {
+  transition: background-color 0.3s ease, color 0.2s ease;
+  -webkit-transition: background-color 0.3s ease, color 0.2s ease;
+  -moz-transition: background-color 0.3s ease, color 0.2s ease;
+  -ms-transition: background-color 0.3s ease, color 0.2s ease;
+  -o-transition: background-color 0.3s ease, color 0.2s ease;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  /* color: var(--text-primary); */
+  transition: all 0.3s ease;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --bg-primary: #e8e8e8;
+  --bg-secondary :#f8f8f8;
+  --text-primary: #222222;
+  --border-color: #131313;
+  --border-color-disabled: #131313;
+  --button-color: #e0e0e0;
+  --button-color-disabled: rgba(91, 91, 91, 0.051);
+  --bg-scroll: #000000;
+  --bg-scrollbar-track: #ffffff;
+  --bg-tool-border: rgb(67, 97, 0);
+  --text-disabled: rgb(171, 171, 171);
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary :#1c1c1c;
+  --text-primary: #e0e0e0;
+  --border-color: #333333;
+  --button-color: #232323;
+  --bg-scroll: #8faf00;
+  --bg-scrollbar-track: rgb(180, 230, 0);
+  --bg-scroll-secondary: #3a3a3a;
+  --bg-tool-border: rgba(191, 255, 52, 0.34);
+  --text-disabled: rgb(116, 116, 116);
 }
